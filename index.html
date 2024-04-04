@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Welcome Canes!</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #1e272e;
+    }
+    .gallery {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .gallery img{
+        flex-wrap: wrap;
+        width: 320px;
+        height: 240px;
+        margin: 10px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+    .sub {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sub-item {
+    position: relative;
+    text-align: center; /* Center text horizontally */
+}
+.text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and opacity */
+    padding: 10px;
+}
+
+
+.text {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5; /* Adjust line height for readability */
+    text-align: left; /* Align text to the left within the box */
+    padding: 0 10px; /* Add padding to text for better spacing */
+    width: 320px;
+    margin: 60px;
+    height: auto;
+}
+
+
+.sub img {
+    width: 320px;
+    height: auto;
+    margin: 60px;
+    margin-bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+.sub-item img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+ .gallery img:hover {
+    transform: scale(1.1);
+    }
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.container{
+
+width: 1280px; /* Change this to a fixed width */
+margin: auto;
+
+}
+
+.nav_checkbox{
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+padding: 10px 0px;
+
+}
+
+.logo{
+
+text-decoration: none;
+color: white;
+padding-left: 10px;
+
+}
+
+.tab-nav{
+
+outline: none;
+display: none;
+
+}
+
+.label{
+
+display: none;
+color: white;
+
+}
+
+.side{
+
+width: 35px;
+height: 5px;
+background-color: white;
+margin-top: 5px;
+
+}
+
+.content_nav{
+
+grid-column: 3;
+list-style: none;
+margin: 0;
+padding: 0;
+
+}
+
+.content_nav li{
+
+display: inline-block;
+padding-right: 100px;
+
+}
+
+.content_nav li a{
+
+text-decoration: none;
+color: white;
+position: relative;
+
+}
+
+.content_nav li a::after{
+
+content: '';
+display: block;
+height: 2px;
+background-color: white;
+position: absolute;
+left: 0;
+right: 0;
+transform-origin: right;
+transform: scale(0, 1);
+transition: transform ease-in-out 0.5s;
+
+}
+
+.content_nav li a:hover::after{
+
+transform: scale(1, 1);
+
+}
+
+.content_section{
+
+height: 120vh;
+background-image: url(back.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+display: grid;
+justify-items: center;
+align-items: center;
+
+
+}
+
+.logo img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    padding-left: 0px;
+    border-radius: 10%;
+}
+h1 {
+    color: white;
+    padding-top: 100px;
+    margin-bottom: -150px;
+    text-align: center;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif
+}
+h2 {
+    color: white;
+    margin-top: -180px;
+    text-align: center;
+    font-size: 150%;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 1px;
+    background-color: rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.UM img {
+    max-width:15%;
+    text-align: center;
+    
+}
+.UM {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav_checkbox">
+                <div class="logo"><img src="cane.jpeg" alt=""></div>
+                <input type="checkbox" id="tab-nav" class="tab-nav">
+                <label for="tab-nav" class="label">
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                </label>
+                <ul class="content_nav">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CAMPUS</a></li>
+                    <li><a href="#">ADMISSIONS</a></li>
+                    <li><a href="#">STUDENT LIFE</a></li>
+                    <li><a href="#">HOUSING</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>WELCOME CANES!</h1>
+    <section class="content_section">
+        <div class="gallery">
+            <img src="1.jpg.webp" alt="">
+            <img src="2.jpg.webp" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg.webp" alt="">
+            <img src="5.webp" alt="">
+            <img src="6.jpg.webp" alt="">
+            <img src="7.webp" alt="">
+            <img src="8.jpg" alt="">
+        </div>
+
+
+    </section>
+    <h2>"As one of the top research universities in the country, the University of Miami brings together esteemed faculty and talented students from throughout the United States and the world. Challenging courses, projects that forge together knowledge and practice, and a stimulating, diverse environment – find it all at the U."</h2>
+    <section class="sub_section">
+        <div class="sub">
+            <div class="sub-item">
+                <img src="com.jpg" alt="">
+                <div class="text">The University of Miami’s 12 schools and colleges offer a wide variety of experiences to students. There are more than 180 undergraduate majors and programs; graduate students have access to a wide range of fields with an emphasis on research.</div>
+            </div>
+            <div class="sub-item">
+                <img src="programs.jpg" alt="">
+                <div class="text">Explore the departments and programs offered at the University and our 12 schools and colleges, including unique interdisciplinary programs, study abroad, dual-degree programs, community outreach, and undergraduate research.</div>
+            </div>
+            <div class="sub-item">
+                <img src="business.jpg" alt="">
+                <div class="text">The University’s Centers and Institutes provide programs and targeted study and immersion in a variety of areas and initiatives. There are also a host of programs associated with individual schools and colleges.</div>
+            </div>
+        </div>
+    </section>
+    <div class="UM">
+        <img src="UM.jpg" alt="">
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /* @media screen and (max-width: 1280px){
+
+    .container{
+    
+        width: 100%;
+    
+    }
+    
+    }
+    
+    @media screen and (max-width: 770px){
+    
+    .label{
+    
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    
+    }
+    
+    .content_nav{
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.6s;
+    
+    }
+    
+    .nav_checkbox input:checked ~ .content_nav{
+    
+        max-height: 500px;
+    
+    }
+    
+    .content_nav li{
+    
+        padding: 15px 0px;
+    
+    }
+    
+    
+    } */ -->
